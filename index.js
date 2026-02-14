@@ -220,7 +220,7 @@ async function run() {
             res.send(result);
         });
 
-        // Admin Stats API
+        // Admin Stats API 
         app.get('/admin/stats', verifyToken, verifyAdmin, async (req, res) => {
             const usersCount = await usersCollection.countDocuments({ role: { $ne: "admin" } });
             const transactionsCount = await transactionsCollection.countDocuments();
