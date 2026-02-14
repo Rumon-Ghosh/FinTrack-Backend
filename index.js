@@ -264,7 +264,7 @@ async function run() {
             res.send(transactions);
         });
 
-        // Transactions API with Pagination 
+        // Transactions API with Pagination and Filtering
         app.get('/transactions', verifyToken, async (req, res) => {
             const email = req.user.email;
             const page = parseInt(req.query.page) || 1;
