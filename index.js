@@ -32,7 +32,7 @@ const client = new MongoClient(uri, {
     }
 });
 
-// Middleware to verify JWT
+// Middleware to verify JWT Token
 const verifyToken = (req, res, next) => {
     const token = req?.cookies?.token;
     if (!token) {
@@ -168,7 +168,7 @@ async function run() {
             });
         });
 
-        // update role here
+        // Update Role
         app.patch('/users/role/:id', verifyToken, verifyAdmin, async (req, res) => {
             const id = req.params.id;
             const { role } = req.body;
