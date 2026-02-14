@@ -201,7 +201,7 @@ async function run() {
             res.send(result);
         });
 
-        // Categories API
+        // Categories API 
         app.get('/categories', async (req, res) => {
             const result = await categoriesCollection.find().toArray();
             res.send(result);
