@@ -47,7 +47,7 @@ const verifyToken = (req, res, next) => {
     });
 };
 
-// Middleware to verify Admin
+// Middleware to verify Admin Role
 const verifyAdmin = async (req, res, next) => {
     const email = req.user.email;
     const query = { email: email };
