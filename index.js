@@ -320,6 +320,7 @@ async function run() {
             });
         });
 
+        // Transaction post API
         app.post('/transactions', verifyToken, async (req, res) => {
             const transaction = req.body;
             transaction.userEmail = req.user.email;
