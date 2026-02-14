@@ -140,7 +140,7 @@ async function run() {
             }).send({ success: true, user: { fullname: user.fullname, email: user.email, photo: user.photo, role: user.role } });
         });
 
-        // Admin Only: Users Management
+        // Admin Only: Users Management API
         app.get('/users', verifyToken, verifyAdmin, async (req, res) => {
             const page = parseInt(req.query.page) || 1;
             const limit = parseInt(req.query.limit) || 10;
