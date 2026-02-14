@@ -168,6 +168,7 @@ async function run() {
             });
         });
 
+        // update role here
         app.patch('/users/role/:id', verifyToken, verifyAdmin, async (req, res) => {
             const id = req.params.id;
             const { role } = req.body;
