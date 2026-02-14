@@ -349,7 +349,7 @@ async function run() {
             res.send(result);
         });
 
-        // Goals API
+        // Goals API 
         app.get('/goals', verifyToken, async (req, res) => {
             const query = { userEmail: req.user.email };
             const result = await goalsCollection.find(query).toArray();
